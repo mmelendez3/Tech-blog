@@ -1,18 +1,16 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
-<article class="post" id="comment-form">
-    <form class="comment-form">
-        <div>Comment</div>
-        <div>
-            <textarea name="comment-body"></textarea>
-        </div>
+<div class="card">
+    <h3 class="card-header"></h3>
+    <form class="card-body comment-form" id="comment-form">
 
-        <div>
-            <button type="submit" id="submit">Submit</button>
-        </div>
+        <label class="form-label">Comment</label>
+        <input id="comment" name="comment-body" class="form-input" />
+
+        <button type="submit" class="btn">Submit</button>
     </form>
-</article>
+</div>
 {{/if}}
 
 {{> comments post.comments}}
